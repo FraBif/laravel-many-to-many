@@ -25,5 +25,12 @@
                 {{ $products->description }}
             </div>
         </div>
+        @if ( count($products->buyers) > 0)
+                        <h6 class="card-header">
+                            @foreach ($product->buyers as $buyer)
+                                {{ $buyer->usernamename }} --
+                            @endforeach
+                        </h6>
+                    @endif
     </div>
 @endsection
